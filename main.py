@@ -10,7 +10,8 @@ def frf(f, c, r):
 
     # Częstość graniczna,
     num = 1 / (c1 * c2 * r1 * r2)
-    den = 1 / (c1 * c2 * r1 * r2) + (r1 + r2) / (c1 * r1 * r2) * 1j * w - w ** 2
+    den = 1 / (c1 * c2 * r1 * r2) + (r1 + r2) / \
+        (c1 * r1 * r2) * 1j * w - w ** 2
 
     return num / den
 
@@ -42,10 +43,12 @@ if __name__ == '__main__':
     r3 = r4 / (k - 1)
 
     # Wypisuje wynik
+    print('Otrzymane wyniki: ')
     print(f'R1 = R2 = {int(r)}Ω')
     print('C1 = C2 = 100nF')
     print(f'R3 = {int(r3)}Ω')
     print(f'R4 = 10000Ω')
+    print(f'k = {round(k,2)}')
 
     plt.figure()
 
